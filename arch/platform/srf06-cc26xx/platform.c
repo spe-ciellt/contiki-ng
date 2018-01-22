@@ -167,6 +167,7 @@ platform_init_stage_two()
 #endif
 
   serial_line_init();
+  cc26xx_uart_set_input(serial_line_input_byte);
 
   /* Populate linkaddr_node_addr */
   ieee_addr_cpy_to(linkaddr_node_addr.u8, LINKADDR_SIZE);
